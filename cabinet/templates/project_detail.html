@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.name }} - Roman Karadev{% endblock %}
+
+{% block content %}
+<!-- Project Hero Section -->
+<section class="project-hero">
+    <div class="container">
+        <div class="project-hero-content">
+            <a href="{% url 'projects' %}#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Назад к проектам</span>
+            </a>
+            
+            <div class="project-header">
+                <div class="project-icon-large">
+                    {% if project.type_icon %}
+                        <i class="{{ project.type_icon.icon }}"></i>
+                    {% else %}
+                        <i class="fas fa-code"></i>
+                    {% endif %}
+                </div>
+                <div class="project-title-section">
+                    <h1 class="project-title">{{ project.name }}</h1>
+                    <p class="project-subtitle">Детальный обзор проекта</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Content Section -->
+<section class="project-content">
+    <div class="container">
+        <div class="project-details">
+            
+            <!-- Project Overview -->
+            <div class="project-section">
+                <h2 class="section-title">Обзор проекта</h2>
+                <div class="project-overview">
+                    <p class="project-description">{{ project.description }}</p>
+                </div>
+            </div>
+
+            <!-- Technical Details -->
+            <div class="project-section">
+                <h2 class="section-title">Технические детали</h2>
+                <div class="tech-details">
+                    <div class="tech-category">
+                        <h3>Backend</h3>
+                        <div class="tech-list">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Frontend</h3>
+                        <div class="tech-list">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Tools</h3>
+                        <div class="tech-list">
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">VS Code</span>
+                            <span class="tech-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="project-section">
+                <h2 class="section-title">Ключевые особенности</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Полностью адаптивный интерфейс, оптимизированный для всех устройств</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Безопасность</h3>
+                        <p>Современные методы аутентификации и защиты данных</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Производительность</h3>
+                        <p>Оптимизированная архитектура для быстрой загрузки</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Пользовательский опыт</h3>
+                        <p>Интуитивно понятный интерфейс с отличным UX</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Links -->
+            {% if project.links %}
+            <div class="project-section">
+                <h2 class="section-title">Ссылки проекта</h2>
+                <div class="project-links-section">
+                    <a href="{{ project.links.url }}" class="project-link-btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>Посмотреть на GitHub</span>
+                    </a>
+                    <a href="#" class="project-link-btn secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Живая демонстрация</span>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Call to Action -->
+            <div class="project-section">
+                <div class="project-cta">
+                    <h2>Хотите обсудить похожий проект?</h2>
+                    <p>Готов помочь создать что-то потрясающее для вашего бизнеса</p>
+                    <div class="cta-buttons">
+                        <a href="{% url 'home' %}#contact" class="btn btn-primary">Связаться со мной</a>
+                        <a href="{% url 'home' %}#projects" class="btn btn-secondary">Все проекты</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    const namePage = "{{ project.name }}";
+</script>
+{% endblock %}
+
+

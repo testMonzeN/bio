@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}О разработчике - Roman Karadev{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-greeting">👋 Привет, я</span>
+                <span class="hero-name">Roman Karadev</span>
+                <span class="hero-role">Python Developer</span>
+            </h1>
+            <p class="hero-description">
+                ✌️ "I have nothing to mention except blood, toil, tears and sweat"<br>
+                👀 Интересуюсь Python разработкой и постоянно изучаю новые технологии
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'skills' %}" class="btn btn-primary">Мои навыки</a>
+                <a href="{% url 'projects' %}" class="btn btn-secondary">Мои проекты</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-avatar">
+                <span>R</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">О себе</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    💡 Постоянно изучаю новые технологии и совершенствую свои навыки в Python разработке. 
+                    Увлекаюсь созданием качественных веб-приложений с использованием Django framework.
+                </p>
+                <p>
+                    🚀 Открыт для новых проектов и сотрудничества. Стремлюсь к написанию чистого, 
+                    поддерживаемого кода и созданию решений, которые решают реальные проблемы.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-text">Года опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-text">Проектов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-text">Увлеченность</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Music Section -->
+<section id="music" class="music-section">
+    <div class="container">
+        <h2 class="section-title">🎵 Моя музыка</h2>
+        
+        <!-- Top Artists -->
+        <div class="music-category">
+            <div class="artists-grid">
+                <div class="artist-card top-artist">
+                    <div class="artist-rank">1</div>
+                    <div class="artist-info">
+                        <h4>Кишлак</h4>
+                        <span class="artist-time">12 часов</span>
+                    </div>
+                    <div class="artist-icon">🎤</div>
+                </div>
+                <div class="artist-card top-artist">
+                    <div class="artist-rank">2</div>
+                    <div class="artist-info">
+                        <h4>CUPSIZE</h4>
+                        <span class="artist-time">11.5 часа</span>
+                    </div>
+                    <div class="artist-icon">🎵</div>
+                </div>
+                <div class="artist-card top-artist">
+                    <div class="artist-rank">3</div>
+                    <div class="artist-info">
+                        <h4>Пошлая Молли</h4>
+                        <span class="artist-time">10 часов</span>
+                    </div>
+                    <div class="artist-icon">🎶</div>
+                </div>
+                <div class="artist-card top-artist">
+                    <div class="artist-rank">4</div>
+                    <div class="artist-info">
+                        <h4>ПОЛМАТЕРИ</h4>
+                        <span class="artist-time">3.5 часа</span>
+                    </div>
+                    <div class="artist-icon">🎸</div>
+                </div>
+                <div class="artist-card top-artist">
+                    <div class="artist-rank">5</div>
+                    <div class="artist-info">
+                        <h4>KSB music</h4>
+                        <span class="artist-time">2.5 часа</span>
+                    </div>
+                    <div class="artist-icon">🎼</div>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    const namePage = "About";
+</script>
+{% endblock %}

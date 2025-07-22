@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты - Roman Karadev{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-greeting">📫 Свяжитесь</span>
+                <span class="hero-name">со мной</span>
+                <span class="hero-role">Обсудим ваш проект</span>
+            </h1>
+            <p class="hero-description">
+                Готов обсудить ваш проект и помочь воплотить ваши идеи в жизнь. 
+                Всегда открыт для интересных предложений и новых вызовов в области Python разработки.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact-info" class="btn btn-primary">Мои контакты</a>
+                <a href="{% url 'projects' %}" class="btn btn-secondary">Мои проекты</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-avatar">
+                <span>📞</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info Section -->
+<section id="contact-info" class="contact">
+    <div class="container">
+        <h2 class="section-title">📫 Как со мной связаться</h2>
+        <div class="contact-content-center">
+            <div class="contact-info">
+                <h3>Мои сотсети</h3>
+                <p>Отвечаю быстро и готов к новым проектам</p>
+                
+                <div class="contact-grid">
+                    <!-- Messages Column -->
+                    <div class="contact-column">
+                        <h4 class="contact-column-title">Message</h4>
+                        <div class="contact-methods">
+                            <a href="https://t.me/KaradevFaceKid" class="contact-method" target="_blank">
+                                <i class="fab fa-telegram"></i>
+                                <div>
+                                    <span class="contact-title">Telegram</span>
+                                    <span class="contact-desc">@KaradevFaceKid</span>
+                                </div>
+                            </a>
+                            <div class="contact-method">
+                                <i class="fab fa-discord"></i>
+                                <div>
+                                    <span class="contact-title">Discord</span>
+                                    <span class="contact-desc">karadevfacekid</span>
+                                </div>
+                            </div>
+                            <a href="mailto:vashhukr2008@gmail.com" class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="contact-title">Email</span>
+                                    <span class="contact-desc">vashhukr2008@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="https://vk.com/GospodinKaradev" class="contact-method" target="_blank">
+                                <i class="fab fa-vk"></i>
+                                <div>
+                                    <span class="contact-title">VKontakte</span>
+                                    <span class="contact-desc">GospodinKaradev</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- My Profiles Column -->
+                    <div class="contact-column">
+                        <h4 class="contact-column-title">My Profiles</h4>
+                        <div class="contact-methods">
+                            <a href="https://github.com/testMonzeN" class="contact-method" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <span class="contact-title">GitHub</span>
+                                    <span class="contact-desc">testMonzeN</span>
+                                </div>
+                            </a>
+                            <a href="https://gitlab.com/testMonzeN" class="contact-method" target="_blank">
+                                <i class="fab fa-gitlab"></i>
+                                <div>
+                                    <span class="contact-title">GitLab</span>
+                                    <span class="contact-desc">testMonzeN</span>
+                                </div>
+                            </a>
+                            <a href="https://guns.lol/karadev" class="contact-method" target="_blank">
+                                <i class="fas fa-link"></i>
+                                <div>
+                                    <span class="contact-title">Bio</span>
+                                    <span class="contact-desc">guns.lol/karadev</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    const namePage = "Contacts";
+</script>
+{% endblock %}

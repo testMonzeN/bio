@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% block title %}Roman Karadev - Python Developer{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-greeting">Привет, я</span>
+                <span class="hero-name">Roman Karadev</span>
+                <span class="hero-role">Python Developer</span>
+            </h1>
+            <p class="hero-description">
+                Создаю качественные веб-приложения с использованием Django, 
+                специализируюсь на backend разработке и работе с базами данных.
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'contacts' %}" class="btn btn-primary">Связаться со мной</a>
+                <a href="{% url 'projects' %}" class="btn btn-secondary">Мои проекты</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-avatar">
+                <span>R</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">О себе</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Увлекаюсь Python разработкой уже более 3 лет. Специализируюсь на создании 
+                    веб-приложений с использованием Django framework. Имею опыт работы с различными 
+                    базами данных, системами контроля версий и современными инструментами разработки.
+                </p>
+                <p>
+                    Постоянно изучаю новые технологии и подходы к разработке. Стремлюсь к написанию 
+                    чистого, поддерживаемого кода и созданию пользовательских интерфейсов, которые 
+                    решают реальные проблемы.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-text">Года опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-text">Проектов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-text">Увлеченность</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Detail Section -->
+<section id="skills-detail" class="skills">
+    <div class="container">
+        <h2 class="section-title">🛠 Что я умею</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">🔧 Django</span>
+                    <span class="skill-tag">🐍 Python</span>
+                    <span class="skill-tag">🗄 MySQL</span>
+                    <span class="skill-tag">🔑 Authentication</span>
+                    <span class="skill-tag">📊 Database Design</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">🌐 HTML5</span>
+                    <span class="skill-tag">🎨 CSS3</span>
+                    <span class="skill-tag">⚡ JavaScript</span>
+                    <span class="skill-tag">📱 Responsive Design</span>
+                    <span class="skill-tag">🎯 DOM Manipulation</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Tools & Technologies</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">🌱 Git</span>
+                    <span class="skill-tag">📁 GitHub</span>
+                    <span class="skill-tag">🦊 GitLab</span>
+                    <span class="skill-tag">💻 VS Code</span>
+                    <span class="skill-tag">🐧 Linux</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Мои основные проекты</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Phantom Marketplace</h3>
+                    <p>Интернет-магазин с системой управления товарами, корзиной и оплатой.</p>
+                    <div class="project-tech">
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="{% url 'phantom_github' %}" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="{% url 'project_detail' pk=2 %}" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Blog Platform</h3>
+                    <p>Блог-платформа с возможностью публикации статей, комментариев и категориями.</p>
+                    <div class="project-tech">
+                        <span>Django</span>
+                        <span>SQLite</span>
+                        <span>CSS Grid</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="{% url 'blog_github' %}" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="{% url 'project_detail' pk=1 %}" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Давайте работать вместе</h2>
+        <div class="contact-content-center">
+            <div class="contact-info">
+                <h3>Свяжитесь со мной</h3>
+                <p>Готов обсудить ваш проект и помочь воплотить ваши идеи в жизнь.</p>
+                <div class="contact-methods">
+                    <a href="mailto:vashhukr2008@gmail.com" class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>vashhukr2008@gmail.com</span>
+                    </a>
+                    <a href="https://t.me/KaradevFaceKid" class="contact-method">
+                        <i class="fab fa-telegram"></i>
+                        <span>@KaradevFaceKid</span>
+                    </a>
+                    <a href="https://github.com/testMonzeN" class="contact-method">
+                        <i class="fab fa-github"></i>
+                        <span>testMonzeN</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    const namePage = "Home";
+</script>
+{% endblock %}

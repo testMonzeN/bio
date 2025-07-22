@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% block title %}Навыки - Roman Karadev{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-greeting">🛠 Мои</span>
+                <span class="hero-name">Навыки</span>
+                <span class="hero-role">& Технологии</span>
+            </h1>
+            <p class="hero-description">
+                👀 Интересуюсь Python разработкой и постоянно изучаю новые технологии. 
+                Специализируюсь на backend разработке с использованием Django и работе с базами данных.
+            </p>
+            <div class="hero-buttons">
+                <a href="#skills-detail" class="btn btn-primary">Подробнее</a>
+                <a href="{% url 'projects' %}" class="btn btn-secondary">Мои проекты</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-avatar">
+                <span>⚡</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Detail Section -->
+<section id="skills-detail" class="skills">
+    <div class="container">
+        <h2 class="section-title">🛠 Что я умею</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">🔧 Django</span>
+                    <span class="skill-tag">🐍 Python</span>
+                    <span class="skill-tag">🗄 MySQL</span>
+                    <span class="skill-tag">🔑 Authentication</span>
+                    <span class="skill-tag">📊 Database Design</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">🌐 HTML5</span>
+                    <span class="skill-tag">🎨 CSS3</span>
+                    <span class="skill-tag">⚡ JavaScript</span>
+                    <span class="skill-tag">📱 Responsive Design</span>
+                    <span class="skill-tag">🎯 DOM Manipulation</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Tools & Technologies</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">🌱 Git</span>
+                    <span class="skill-tag">📁 GitHub</span>
+                    <span class="skill-tag">🦊 GitLab</span>
+                    <span class="skill-tag">💻 VS Code</span>
+                    <span class="skill-tag">🐧 Linux</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Skills Section -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">🔧 Технические навыки</h2>
+        <div class="tech-details">
+            <div class="tech-category">
+                <h3>Programming Languages</h3>
+                <div class="tech-list">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Frameworks & Libraries</h3>
+                <div class="tech-list">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Django REST Framework</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">Telegram Bot API</span>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Databases</h3>
+                <div class="tech-list">
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">Database Design</span>
+                    <span class="tech-tag">Query Optimization</span>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Development Tools</h3>
+                <div class="tech-list">
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">GitHub</span>
+                    <span class="tech-tag">GitLab</span>
+                    <span class="tech-tag">VS Code</span>
+                    <span class="tech-tag">Command Line</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Level Section -->
+<section class="about">
+    <div class="container">
+        <h2 class="section-title">📊 Уровень навыков</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    🐍 <strong>Python & Django:</strong> Продвинутый уровень. Создаю полноценные веб-приложения с аутентификацией, 
+                    базами данных и REST API. Знаком с паттернами проектирования и лучшими практиками.
+                </p>
+                <p>
+                    🌐 <strong>Frontend Technologies:</strong> Средний уровень. Создаю адаптивные интерфейсы, 
+                    работаю с DOM, использую современные CSS техники и JavaScript для интерактивности.
+                </p>
+                <p>
+                    🛠 <strong>DevOps & Tools:</strong> Базовый/Средний уровень. Уверенно работаю с Git, 
+                    системами контроля версий, настройкой проектов и развертыванием приложений.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-text">Года с Python</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-text">Проектов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-text">Желание учиться</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learning Section -->
+<section class="skills">
+    <div class="container">
+        <h2 class="section-title">📚 Что изучаю</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Advanced Django</h3>
+                <p>Углубляю знания в Django: сигналы, кеширование, оптимизация запросов, middleware и продвинутые техники.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Bot Development</h3>
+                <p>Развиваю навыки создания Telegram ботов с использованием Python, изучаю продвинутые возможности API.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Deployment & DevOps</h3>
+                <p>Изучаю способы развертывания Django приложений, Docker, CI/CD, и облачные платформы.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Performance Optimization</h3>
+                <p>Изучаю методы оптимизации производительности веб-приложений, профилирование и мониторинг.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script>
+    const namePage = "Skills";
+</script>
+{% endblock %}
